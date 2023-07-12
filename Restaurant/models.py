@@ -3,10 +3,10 @@ from django.db import models
 class menu(models.Model):
     title = models.CharField(max_length=200)
     price = models.FloatField()
-    invertory = models.SmallIntegerField()
+    inventory = models.SmallIntegerField()
     
     def __str__(self):
-        return self.title + " - " + str(self.price) + " - " + self.invertory
+        return self.title + " - " + str(self.price) + " - " + str(self.inventory)
 
 class booking(models.Model):
     name = models.CharField(max_length=200)
