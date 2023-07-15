@@ -23,25 +23,8 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
 
 
-class UserView(generics.ListCreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
-
-
-class SingleUserView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
-
-
 class BookingView(ModelViewSet):
     queryset = booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticated]
 
-
-class SingleBookingView(ModelViewSet):
-    queryset = booking.objects.all()
-    serializer_class = BookingSerializer
-    permission_classes = [IsAuthenticated]
