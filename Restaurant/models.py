@@ -10,7 +10,7 @@ class menu(models.Model):
         return self.title
 
     def get_item(self):
-        return f"{self.title} : {self.price}"
+        return f"{self.title}: {self.price}"
 
 
 class booking(models.Model):
